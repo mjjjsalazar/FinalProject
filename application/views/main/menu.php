@@ -66,7 +66,7 @@
     </div>
 
     <div id="mm2" style="width:200px;" class="requestMenu">
-        <div select-item="">Create New Request</div>
+        <div select-item="bamjrs/create">Create New Request</div>
         <div class="menu-sep"></div>
         <div select-item="">My Requests</div>
         <div>
