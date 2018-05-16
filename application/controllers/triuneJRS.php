@@ -25,19 +25,28 @@ class triuneJRS extends MY_Controller {
 
     public function BAMCreateRequest() {
         $this->load->view('bamjrs/create');
+	}
+	
+	public function ICTCreateRequest() {
+        $this->load->view('ictjrs/create');
     }
 
     public function BAMCreateRequestConfirmation() {
 		$data['locationCode'] = $_POST["locationCode"];
-		$data['floor'] = $_POST["floor"];
-		$data['roomNumber'] = $_POST["roomNumber"];
-		$data['projectTitle'] = $_POST["projectTitle"];
-		$data['scopeOfWorks'] = $_POST["scopeOfWorks"];
 		$data['projectJustification'] = $_POST["projectJustification"];
 		$data['dateNeeded'] = $_POST["dateNeeded"];
 
 
         $this->load->view('bamjrs/createConfirmation', $data);
+	}
+	
+	public function ICTCreateRequestConfirmation() {
+		$data['locationCode'] = $_POST["locationCode"];
+		$data['projectJustification'] = $_POST["projectJustification"];
+		$data['dateNeeded'] = $_POST["dateNeeded"];
+
+
+        $this->load->view('ictjrs/createConfirmation', $data);
     }
 
     public function BAMCreatedRequest() {

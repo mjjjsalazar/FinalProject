@@ -9,6 +9,7 @@
                     <input  class="modal-textbox" readonly name="locationCode" id="locationCode"  value="<?php echo $locationCode?>" style="width:100%">
             
                 </div>
+
             </div>
             <div style="margin-bottom:1px" class="two-column">
                 <input readonly name="projectJustification" id="projectJustification" style="width:100%;height:100px" value="<?php echo $projectJustification?>">

@@ -10,19 +10,11 @@
         <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
             <div style="margin-bottom:5px">
                 <div style="margin-bottom:1px" >
-                    <input class="easyui-combobox" name="locationCode" id="locationCode" style="width:100%" prompt="Job Qualification" data-options="
-                            url:'getLocationCode',
+                    <input class="easyui-combobox" name="locationCode" id="locationCode" style="width:100%" prompt="Job Classification" data-options="
+                            url:'getJobCode',
                             method:'get',
                             valueField:'locationCode',
                             textField:'locationDescription',
-                            onSelect: function(rec){
-                                var url = 'getFloor?locationCode='+rec.locationCode;
-                                console.log( $('#floor').attr('prompt'));
-                                $('#roomNumber').textbox('clear');
-                                $('#floor').textbox('clear');
-                                $('#floor').combobox('reload', url);
-                                $('#roomNumber').combobox('reload', url);
-                            },
                             panelHeight:'auto',
                             required:true
                             ">
@@ -30,7 +22,7 @@
 
             </div>
             <div style="margin-bottom:1px" class="two-column">
-                <input class="easyui-textbox" name="projectJustification" id="projectJustification" style="width:100%;height:100px" data-options="prompt:'Description of Request:',multiline:true,required:true">
+                <input class="easyui-textbox" name="projectJustification" id="projectJustification" style="width:100%;height:100px" data-options="prompt:'Description of Request',multiline:true,required:true">
 
             </div>
 
@@ -73,7 +65,7 @@
             <div id="request-confirmation"> </div>
     </div>    
     
-	<script src="<?php echo base_url();?>assets/scripts/triunebamjrs.js"></script>
+	<script src="<?php echo base_url();?>assets/scripts/triuneictjrs.js"></script>
 
 
 </div>

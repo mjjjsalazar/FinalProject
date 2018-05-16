@@ -58,15 +58,18 @@ $route['auth/forgot'] = 'triuneAuth/forgotPassword';
 $route['auth/hello'] = 'triuneAuth/index';
 $route['main'] = 'triuneAuth/mainView';
 $route['main/jobRequest'] = 'triuneMain/jobRequest';
+$route['ictjrs/create'] = 'triuneJRS/ICTCreateRequest';
 $route['bamjrs/create'] = 'triuneJRS/BAMCreateRequest';
 $route['bamjrs/getCreateConfirmation'] = 'triuneJRS/BAMCreateRequestConfirmation';
+$route['ictjrs/getCreateConfirmation'] = 'triuneJRS/ICTCreateRequestConfirmation';
 $route['bamjrs/getCreatedRequest'] = 'triuneJRS/BAMCreatedRequest';
 $route['bamjrs/getMyRequestList'] = 'triuneJRS/BAMMyRequestList';
 $route['bamjrs/getNewRequestList'] = 'triuneJRS/BAMNewRequestList';
 $route['bamjrs/getNewRequestVerification'] = 'triuneJRS/BAMNewRequestVerification';
 
 
-$route['getLocationCode'] = 'triuneData/getLocationCode'; 
+$route['getLocationCode'] = 'triuneData/getLocationCode';
+$route['getJobCode'] = 'triuneData/getJobCode';  
 $route['getFloor'] = 'triuneData/getFloor'; 
 $route['getRoomNumber'] = 'triuneData/getRoomNumber'; 
 $route['getBAMJRSMyRequestList'] = 'triuneData/getBAMJRSMyRequestList'; 

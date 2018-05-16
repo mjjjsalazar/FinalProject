@@ -23,6 +23,7 @@
         <tr >
             <th field="ID" >ID</th>
             <th field="locationCode" >Location Code</th>
+            <th field="projectTitle"  >Project Title</th>
             <th field="dateCreated"  align="right">Date Created</th>
             <th field="dateNeeded"  align="right">Date Needed</th>
             <th field="requestStatusDescription" >Request Status</th>

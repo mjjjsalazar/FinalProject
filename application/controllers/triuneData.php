@@ -34,6 +34,16 @@ class triuneData extends MY_Controller {
 			echo json_encode($results);
 	}
 
+	public function getJobCode() {
+		$results = $this->_getRecordsData($data = array('locationCode', 'locationDescription'), 
+			$tables = array('triune_job'), $fieldName = null, $where = null, $join = null, $joinType = null, 
+			$sortBy = array('locationDescription'), $sortOrder = array('asc'), $limit = null, 
+			$fieldNameLike = null, $like = null, 
+			$whereSpecial = null, $groupBy = null );
+
+			echo json_encode($results);
+	}
+
     public function getFloor() {
 		$locationCode = $_GET["locationCode"];
 		//echo $locationCode;
@@ -110,16 +120,6 @@ class triuneData extends MY_Controller {
 			if(empty($resultsLoc)) {
 				$notExistMessage["locationCodeNotExist"] = "No reference for location codes in the database!";
 			} 
-			
-			if(empty($resultsRm)) {
-				$notExistMessage["roomNumberNotExist"] = "No reference for room numbers in the database!";
-
-			} 
-			
-			if(empty($resultsFlr)) {
-				$notExistMessage["floorNotExist"] = "No reference for floor in the database!";
-
-			} 
 			if(count($notExistMessage) > 0) {
 				echo json_encode($notExistMessage);
 			} elseif(count($notExistMessage) == 0) {
@@ -127,10 +127,6 @@ class triuneData extends MY_Controller {
 					$returnValue = array();
 					
 					$returnValue['locationCode'] = $locationCode;
-					$returnValue['floor'] = $floor;
-					$returnValue['roomNumber'] = $roomNumber;
-					$returnValue['projectTitle'] = $projectTitle;
-					$returnValue['scopeOfWorks'] = $scopeOfWorks;
 					$returnValue['projectJustification'] = $projectJustification;
 					$returnValue['dateNeeded'] = $dateNeeded;
 
